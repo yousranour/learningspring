@@ -3,22 +3,25 @@
  */
 package com.example.demo.controller;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.LearningInformation;
 
 /**
- * Premier Web service Simple renvoie information format json
+ * Premier Web service renvoie reponse en xml
+ * 
+ * à finir
  * 
  * @author yosra
  *
  */
 
 @RestController
-public class HealthController {
+public class HealthXmlController {
 
-	@GetMapping("/learningInfo")//
+	@GetMapping(value="/learningInfoxml" )//, produces=MediaType.APPLICATION_XML_VALUE)//
 	public LearningInformation sendSalam(){
 		
 		LearningInformation learningInformation = new LearningInformation();
